@@ -1,5 +1,5 @@
-#ifndef CUSTOM_LOGGER_H
-#define CUSTOM_LOGGER_H
+
+#pragma once
 
 #include "crow.h"
 
@@ -14,5 +14,3 @@ class CustomLogger : public crow::ILogHandler {
             std::cerr << "My custom logger: " << message << std::endl;
         }
 };
-
-#endif

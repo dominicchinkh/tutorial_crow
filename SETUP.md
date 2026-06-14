@@ -110,7 +110,7 @@ Navigate to your project directory and run this single command:
 openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt -sha256 -days 365 -nodes -subj "/CN=localhost"
 ```
 
-### What do all those flags mean?
+What do all those flags mean?
 
 * req -x509: Tells OpenSSL to output a self-signed certificate directly, rather than generating a Certificate Signing Request (CSR).
 
@@ -125,3 +125,10 @@ openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt -sha256 -d
 * nodes: Short for "No DES". This tells OpenSSL not to encrypt the private key with a password. If you omit this, your Crow server will freeze on startup every time waiting for you to type a password in the terminal.
 
 * subj "/CN=localhost": Skips the interactive questionnaire (Country, State, Locality) and instantly binds the certificate to localhost.
+
+Copy the certificate into certs directory
+
+```bash
+mkdir certs
+mv server.* certs
+```

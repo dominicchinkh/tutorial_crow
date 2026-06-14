@@ -1,5 +1,5 @@
-#ifndef EMPLOYEE_H
-#define EMPLOYEE_H
+
+#pragma once
 
 #include <string>
 #include "crow.h" 
@@ -20,5 +20,3 @@ class Employee: public crow::returnable
         const std::string name;
 
 };
-
-#endif

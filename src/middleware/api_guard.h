@@ -1,5 +1,5 @@
-#ifndef API_GUARD_H
-#define API_GUARD_H
+
+#pragma once
 
 #include <chrono>
 #include <iostream>
@@ -43,5 +43,3 @@ struct ApiGuard : crow::ILocalMiddleware {
         std::cout << "[LOG] Response status sent: " << res.code << std::endl;
     }
 };
-
-#endif
