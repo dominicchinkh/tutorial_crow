@@ -101,3 +101,27 @@ Execute the generated binary
 ```bash
 ./bin/test
 ```
+
+## Optional: generate SSL self-signed certificate
+
+Navigate to your project directory and run this single command:
+
+```bash
+openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt -sha256 -days 365 -nodes -subj "/CN=localhost"
+```
+
+### What do all those flags mean?
+
+* req -x509: Tells OpenSSL to output a self-signed certificate directly, rather than generating a Certificate Signing Request (CSR).
+
+* newkey rsa:4096: Creates a new 4096-bit RSA cryptographic key pair.
+
+* keyout server.key: Saves the private key file as server.key.
+
+* out server.crt: Saves the public SSL certificate file as server.crt.
+
+* -days 365: Sets the certificate to remain valid for exactly one year.
+
+* nodes: Short for "No DES". This tells OpenSSL not to encrypt the private key with a password. If you omit this, your Crow server will freeze on startup every time waiting for you to type a password in the terminal.
+
+* subj "/CN=localhost": Skips the interactive questionnaire (Country, State, Locality) and instantly binds the certificate to localhost.

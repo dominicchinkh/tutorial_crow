@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 4.0)
 
-# 1. Force the C++17 standard
+# Force the C++17 standard
 set(CMAKE_CXX_STANDARD 17)
 
-# 2. Ensure that C++17 is an absolute requirement (fails early if the compiler is too old)
+# Ensure that C++17 is an absolute requirement (fails early if the compiler is too old)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Enable SSL
+set(CROW_ENABLE_SSL ON)
 
 set(
     PROJECT

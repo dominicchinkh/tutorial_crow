@@ -71,3 +71,5 @@ Testing/
 Crow/
 out/
 bin/
+certs/
+data.csv
