@@ -65,7 +65,13 @@ int main(int argc, char *argv[])
 
     //------------
     // Add routes
-    register_api_routes(app);
+    register_basic_routes(app);
+    register_cookie_routes(app);
+    register_cors_routes(app);
+    register_json_routes(app);
+    register_middleware_routes(app);
+    register_multipart_routes(app);
+    register_session_routes(app);
 
     //-----------------
     // Catch all route

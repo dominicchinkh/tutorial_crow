@@ -61,7 +61,13 @@ file(GLOB_RECURSE HEADERS
 
 set(SOURCES 
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/route/route.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/route/basic.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/route/cookie.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/route/cors.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/route/json.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/route/middleware.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/route/multipart.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/route/session.cpp
 )
 
 add_executable(

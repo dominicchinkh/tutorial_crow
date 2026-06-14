@@ -13,4 +13,10 @@ using Session = crow::SessionMiddleware<crow::FileStore>;
 using CrowApp = crow::App<crow::CookieParser, Session, ApiGuard, crow::CORSHandler>;
 
 // Function declaration to register our standard routes
-void register_api_routes(CrowApp& app);
+void register_basic_routes(CrowApp& app);
+void register_cookie_routes(CrowApp& app);
+void register_cors_routes(CrowApp& app);
+void register_json_routes(CrowApp& app);
+void register_middleware_routes(CrowApp& app);
+void register_multipart_routes(CrowApp& app);
+void register_session_routes(CrowApp& app);
