@@ -46,7 +46,7 @@ sudo make install
 Optionally, build single header `crow_all.h`
 
 ```bash
-cd scripts
+cd ../scripts
 python3 merge_all.py ../include crow_all.h
 ```
 

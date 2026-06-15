@@ -16,7 +16,7 @@ set(
 
 project (${PROJECT})
 
-# determine architecture
+# Determine architecture
 if(NOT ${CUSTOM_ARCH} MATCHES "x32" AND NOT ${CUSTOM_ARCH} MATCHES "x64")
     set(
         CUSTOM_ARCH
@@ -24,7 +24,6 @@ if(NOT ${CUSTOM_ARCH} MATCHES "x32" AND NOT ${CUSTOM_ARCH} MATCHES "x64")
     )
 endif()
 
-# Ouput - path
 # All binaries are located in the bin - folder
 set(
     EXECUTABLE_OUTPUT_PATH
